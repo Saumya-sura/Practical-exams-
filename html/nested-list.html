@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML List Examples</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        .section { margin-bottom: 2em; }
+    </style>
+</head>
+<body>
+    <h1>HTML List Examples</h1>
+
+    <div class="section">
+        <h2>Ordered List (Default - Numbers)</h2>
+        <ol>
+            <li>First item</li>
+            <li>Second item</li>
+            <li>Third item</li>
+        </ol>
+    </div>
+
+    <div class="section">
+        <h2>Unordered List (Default - Disc)</h2>
+        <ul>
+            <li>Apple</li>
+            <li>Banana</li>
+            <li>Cherry</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Ordered List Types</h2>
+        <ol type="A">
+            <li>Type A (A, B, C...)</li>
+            <li>Second</li>
+        </ol>
+        <ol type="a">
+            <li>Type a (a, b, c...)</li>
+            <li>Second</li>
+        </ol>
+        <ol type="I">
+            <li>Type I (I, II, III...)</li>
+            <li>Second</li>
+        </ol>
+        <ol type="i">
+            <li>Type i (i, ii, iii...)</li>
+            <li>Second</li>
+        </ol>
+    </div>
+
+    <div class="section">
+        <h2>Unordered List Types</h2>
+        <ul style="list-style-type: square;">
+            <li>Square</li>
+            <li>Second</li>
+        </ul>
+        <ul style="list-style-type: circle;">
+            <li>Circle</li>
+            <li>Second</li>
+        </ul>
+        <ul style="list-style-type: disc;">
+            <li>Disc</li>
+            <li>Second</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Nested Lists</h2>
+        <ul>
+            <li>Fruits
+                <ul>
+                    <li>Apple</li>
+                    <li>Banana</li>
+                </ul>
+            </li>
+            <li>Vegetables
+                <ul>
+                    <li>Carrot</li>
+                    <li>Broccoli</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Nested Ordered List (Start from 4)</h2>
+        <ol start="4">
+            <li>Fourth item
+                <ol type="a" start="3">
+                    <li>c. Nested item</li>
+                    <li>d. Nested item</li>
+                </ol>
+            </li>
+            <li>Fifth item</li>
+        </ol>
+    </div>
+
+    <div class="section">
+        <h2>Deeply Nested List (Mixed Types)</h2>
+        <ol type="A" start="2">
+            <li>B. Main
+                <ul style="list-style-type: square;">
+                    <li>Sub 1
+                        <ol type="i" start="4">
+                            <li>iv. Deep</li>
+                            <li>v. Deep</li>
+                        </ol>
+                    </li>
+                </ul>
+            </li>
+        </ol>
+    </div>
+
+</body>
+</html>
