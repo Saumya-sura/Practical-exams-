@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>All Click Events Demo</title>
+    <script>
+        // onload event
+        window.onload = function() {
+            logEvent('onload', 'Page loaded');
+        };
+
+        // onunload event
+        window.onunload = function() {
+            logEvent('onunload', 'Page unloaded');
+        };
+
+        function logEvent(eventName, message) {
+            const output = document.getElementById('output');
+            const div = document.createElement('div');
+            div.textContent = eventName + ': ' + message;
+            output.appendChild(div);
+        }
+
+        function handleClick() {
+            logEvent('onclick', 'Button clicked');
+        }
+        function handleMouseOver() {
+            logEvent('onmouseover', 'Mouse over button');
+        }
+        function handleMouseOut() {
+            logEvent('onmouseout', 'Mouse out from button');
+        }
+        function handleFocus() {
+            logEvent('onfocus', 'Input focused');
+        }
+        function handleKeyPress() {
+            logEvent('onkeypress', 'Key pressed in input');
+        }
+        function handleKeyDown() {
+            logEvent('onkeydown', 'Key down in input');
+        }
+        function handleSubmit(event) {
+            event.preventDefault();
+            logEvent('onsubmit', 'Form submitted');
+        }
+    </script>
+</head>
+<body>
+    <h2>Event Demo</h2>
+    <button onclick="handleClick()" onmouseover="handleMouseOver()" onmouseout="handleMouseOut()">Hover or Click Me</button>
+    <br><br>
+    <form onsubmit="handleSubmit(event)">
+        <input type="text" onfocus="handleFocus()" onkeypress="handleKeyPress()" onkeydown="handleKeyDown()" placeholder="Type here...">
+        <button type="submit">Submit</button>
+    </form>
+    <div id="output" style="margin-top:20px; border:1px solid #ccc; padding:10px; min-height:50px;">
+        <strong>Event Output:</strong>
+    </div>
+</body>
+</html>

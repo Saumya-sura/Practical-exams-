@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Student Registration Form</title>
+
+<script>
+
+function validateForm()
+{
+    // Get values from fields
+    var fname = document.getElementById("fname").value;
+    var lname = document.getElementById("lname").value;
+    var father = document.getElementById("father").value;
+    var mobile = document.getElementById("mobile").value;
+    var email = document.getElementById("email").value;
+    var password = document.getElementById("password").value;
+    var day = document.getElementById("day").value;
+    var month = document.getElementById("month").value;
+    var year = document.getElementById("year").value;
+
+    var letters = /^[A-Za-z]+$/;
+    var numbers = /^[0-9]+$/;
+    var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    var passPattern = /^.{6,}$/;
+
+    if(!fname.match(letters))
+    {
+        alert("First name must contain only letters");
+        return false;
+    }
+
+    if(!lname.match(letters))
+    {
+        alert("Last name must contain only letters");
+        return false;
+    }
+
+    if(!father.match(letters))
+    {
+        alert("Father name must contain only letters");
+        return false;
+    }
+
+    if(!mobile.match(numbers) || mobile.length != 10)
+    {
+        alert("Enter valid 10 digit mobile number");
+        return false;
+    }
+
+    if(!email.match(emailPattern))
+    {
+        alert("Enter valid email address");
+        return false;
+    }
+    if(!password.match(passPattern))
+    {
+        alert("Password must be at least 6 characters");
+        return false;
+    }
+
+    if(!day.match(numbers) || !month.match(numbers) || !year.match(numbers))
+    {
+        alert("Date must contain numbers only");
+        return false;
+    }
+
+    alert("Form submitted successfully!");
+
+}
+
+</script>
+
+</head>
+
+<body>
+
+<center>
+
+<form onsubmit="return validateForm()">
+
+<table bgcolor="#ffe4e1" cellpadding="10" width="600">
+
+<tr>
+<td colspan="2" align="center">
+<h1>Student Registration Form</h1>
+</td>
+</tr>
+
+<tr>
+<td><b>Student Name :</b></td>
+<td>
+<input type="text" id="fname" placeholder="First Name"> -
+<input type="text" id="lname" placeholder="Last Name">
+</td>
+</tr>
+
+<tr>
+<td><b>Father's Name :</b></td>
+<td><input type="text" id="father" size="40"></td>
+</tr>
+
+<tr>
+<td><b>Date of Birth :</b></td>
+<td>
+<input type="text" id="day" placeholder="DD" size="5"> -
+<input type="text" id="month" placeholder="MM" size="5"> -
+<input type="text" id="year" placeholder="YYYY" size="8">
+</td>
+</tr>
+
+<tr>
+<td><b>Mobile No :</b></td>
+<td>
+<input type="text" value="+91" size="3"> -
+<input type="text" id="mobile" size="20">
+</td>
+</tr>
+
+<tr>
+<td><b>Email :</b></td>
+<td><input type="text" id="email" size="40"></td>
+</tr>
+
+<tr>
+<td><b>Password :</b></td>
+<td><input type="password" id="password" size="40"></td>
+</tr>
+
+<tr>
+<td><b>Gender :</b></td>
+<td>
+<input type="radio" name="gender"> Male
+<input type="radio" name="gender"> Female
+</td>
+</tr>
+
+<tr>
+<td colspan="2" align="center">
+<br>
+<input type="submit" value="Register">
+</td>
+</tr>
+
+</table>
+
+</form>
+
+</center>
+
+</body>
+</html>
