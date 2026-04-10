@@ -1,0 +1,30 @@
+<html>
+<head><title>Reverse Array</title></head>
+<body>
+
+<h2>Reverse Array</h2>
+
+<form>
+Enter Array (comma separated):
+<input type="text" id="arr" size="40"><br><br>
+
+<button type="button" onclick="rev()">Reverse</button>
+</form>
+
+<p id="out"></p>
+
+<script>
+function rev(){
+    let arr = document.getElementById("arr").value.split(",").map(Number);
+    let r=[];
+
+    for(let i=arr.length-1;i>=0;i--){
+        r.push(arr[i]);
+    }
+
+    document.getElementById("out").innerText = "Reversed Array = " + r.join(", ");
+}
+</script>
+
+</body>
+</html>

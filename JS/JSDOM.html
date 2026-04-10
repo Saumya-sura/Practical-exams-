@@ -1,18 +1,18 @@
 <html>
-<head>
-<script>  
-function myFunc(){  
-var fname=document.loginform.firstname.value;  
-document.write("Hello " + fname + "! Welcome to JavaScript"); 
-}  
-</script>  
-</head>
-<body>
-<form name="loginform">
-Enter your name : <input type="text" name="firstname">
-<input type="submit" value="Submit" onclick="myFunc();">
-<input type="button" onclick='document.getElementById("demo").innerHTML = "Lets start with it !!!"' value="Click Me!"></button>
-</form>
-<p id="demo"></p>
-</body>
+    <body>
+        <input type = "text" id="name" placeholder="Enter your name">
+        <input type= "submit" onclick = "greet()">
+        <input type = "button" onclick = "g1()" value="demo">
+        <p id ="demo"
+    </body>
+    <script>
+        function g1(){
+            var s = document.getElementById("demo").innerHTML = "Hello " + document.getElementById("name").value + "!";
+
+        }
+        function greet(){
+            var name = document.getElementById("name").value;
+            alert("Hello " + name + "!");
+        }
+        </script>
 </html>
