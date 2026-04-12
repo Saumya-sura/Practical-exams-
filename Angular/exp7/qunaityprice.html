@@ -1,0 +1,22 @@
+<html>
+    <script src =" https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<script>
+    var app = angular.module("m",[]);
+    app.controller("my",function ($scope){
+        $scope.quantity = 1;
+        $scope.price = 5;
+    });
+</script>
+<body ng-app = "m" ng-controller="my">
+    <h2>Quantity &amp; Price Calculator</h2>
+    <form>
+        <label>Quantity:
+            <input type="number" ng-model="quantity" min="1">
+        </label><br><br>
+        <label>Price:
+            <input type="number" ng-model="price" min="0">
+        </label><br><br>
+        <div style="font-weight:bold;">Total Cost : <span ng-bind="(quantity || 0) * (price || 0)"></span></div>
+    </form>
+</body>
+</html>
