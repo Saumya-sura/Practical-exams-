@@ -1,0 +1,39 @@
+<html ng-app="app"> 
+
+<script src="angular.min.js"></script> 
+
+<body ng-controller="ctrl"> 
+
+ 
+
+<p>Circle: {{circle}}</p> 
+
+<p>Rectangle: {{rect}}</p> 
+
+ 
+
+<script> 
+
+angular.module("app",[]) 
+
+.factory("AreaFactory", function(){ 
+
+    return { 
+
+        circle: function(r){ return 3.14*r*r; }, 
+
+        rect: function(l,b){ return l*b; } 
+
+    } 
+
+}) 
+
+.controller("ctrl", function($scope,AreaFactory){ 
+
+    $scope.circle = AreaFactory.circle(5); 
+
+    $scope.rect = AreaFactory.rect(4,6); 
+
+}); 
+
+</script>

@@ -1,0 +1,20 @@
+<html>
+    <script src =" https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script>
+        var app = angular.module("m",[]);
+        app.value("product",{name:"Laptop", price:50000});
+       
+        app.controller("my",function($scope,product){
+
+           $scope.p =product;
+ 
+        });
+    </script>
+    <body ng-app="m" ng-controller="my">
+        
+        <p> 
+            Product Name : {{p.name}} <br>
+            Product Price : {{p.price}}
+        </body>
+
+</html>

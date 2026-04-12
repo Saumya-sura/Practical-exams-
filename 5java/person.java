@@ -23,6 +23,10 @@ class Emp extends p{
         System.out.println("Employee ID: "+empid);
         System.out.println("Department: "+dept);
     }
+    public void getdata(String string, int i, String string2, int j) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getdata'");
+    }
 }
 class Manager extends Emp{
     int sal;

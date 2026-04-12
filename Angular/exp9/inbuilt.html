@@ -1,0 +1,40 @@
+<html>
+    <script src =" https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script>
+        var app = angular.module("m",[]);
+        app.controller("my",function($scope,$location,$timeout,$http,$interval){
+            $scope.url = $location.absUrl(); 
+
+ 
+
+    $timeout(function(){ 
+
+        $scope.time = "Timeout Executed"; 
+
+    },2000); 
+
+ 
+
+    $interval(function(){ 
+
+        $scope.time = new Date(); 
+
+    },1000); 
+
+ 
+
+    $http.get("https://jsonplaceholder.typicode.com/posts/1") 
+
+    .then(function(res){ 
+
+        $scope.data = res.data.title; 
+
+    }); 
+        });
+    </script>
+    <body ng-app="m" ng-controller="my">
+        <h2> Inbuilt Services in AngularJS </h2>
+        <p> Current URL: {{url}} </p>
+        <p> {{time}} </p>
+        <p> Data from API: {{data}} </p>
+</html>
