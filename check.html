@@ -1,0 +1,38 @@
+<html>
+    <script src = "http://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script>
+        var app =angular.module("myApp",[]);
+        app.service("serv", function(){
+            this.sum  =function(a,b){
+                return a+b;
+            }
+            this.diff =function(a,b){
+                return a-b;
+            }
+        });
+        
+        app.controller("my",function($scope, serv){
+                $scope.add = function(){
+                    $scope.ares  =serv.sum($scope.a,$scope.b);
+                }
+                $scope.sub = function(){
+                    $scope.dres  =serv.diff($scope.a,$scope.b);
+                }
+            
+        })
+    </script>
+    <body ng-app="myApp" ng-controller="my" >
+       
+        Enter 1st number: <input type="number" ng-model="a"><br><br>
+        Enter 2nd number: <input type="number" ng-model="b"><br
+><br>
+
+        <button ng-click="add()">Add</button>
+        <button ng-click="sub()">Subtract</button><br><br>
+        
+        Sum: {{ares}}<br><br>
+        Difference: {{dres}}
+    
+    </body>
+
+    </html>
