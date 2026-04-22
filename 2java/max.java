@@ -16,7 +16,7 @@ class max{
         System.out.println("The maximum number is: " + max);
         System.out.println("The minimum number is: " + min);
         System.out.println("The total of the three numbers is: " + total);
-        System.out.println("The average of the three numbers is: " + (total / 3.0));
-        
+        System.out.println("The average of the three numbers is: " + (total / 3.0));  
+    
     }
 }

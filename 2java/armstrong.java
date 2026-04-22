@@ -1,5 +1,4 @@
 import java.util.Scanner;
-
 public class armstrong {
         public static void main (String args[]){
             Scanner sc = new Scanner(System.in);
@@ -13,7 +12,6 @@ public class armstrong {
                 temp /= 10;
             }
             temp = num;
-            // Calculate sum of digits raised to the power n
             while (temp != 0) {
                 int digit = temp % 10;
                 sum += Math.pow(digit, n);

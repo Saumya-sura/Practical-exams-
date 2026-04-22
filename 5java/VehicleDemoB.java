@@ -13,6 +13,7 @@ class Car extends Vehicle {
 }
 
 class ElectricCar extends Car {
+    super.start(); // Call Vehicle's start method
     void batteryCapacity() {
         System.out.println("ElectricCar battery capacity: 60 kWh");
     }

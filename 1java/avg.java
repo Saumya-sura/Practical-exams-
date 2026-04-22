@@ -5,7 +5,7 @@ public class avg {
         double marks1, marks2, marks3, average;
         // i want a phone number 10 digits
         long phoneNumber;
-        // taking input from user
+       
         java.util.Scanner sc = new java.util.Scanner(System.in);
         System.out.print("Enter your name: ");
         name = sc.nextLine();
