@@ -11,7 +11,7 @@ class student {
         name = sc.nextLine();
         System.out.print("Enter roll number: ");
         rollno = sc.nextInt();
-        sc.nextLine(); // consume newline
+        sc.nextLine(); 
         System.out.print("Enter date of birth (dd/mm/yyyy): ");
         dob = sc.nextLine();
     }

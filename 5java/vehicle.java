@@ -21,6 +21,7 @@ public class vehicle {
         Truck t = new Truck();
 
         c.drive();
+        b.drive();
         b.drive_bike();
         t.drive_truck();
     }

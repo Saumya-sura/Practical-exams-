@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 class librarybookc{
     String title,author;
     int price;
@@ -14,7 +16,17 @@ class librarybookc{
 }
 class librarybook{
     public static void main (String [] args){
-        librarybookc c = new librarybookc("harry", "potter", 2);
+    System.out.println("Library Book Details:");
+        System.out.println("----------------------");
+        System.out.println("Enter book details:");
+        System.out.println("Title: ");
+        Scanner sc = new Scanner(System.in);
+        String title = sc.nextLine();  
+        System.out.println("Author: ");
+        String author = sc.nextLine();
+        System.out.println("Price: ");
+        int price = sc.nextInt();
+        librarybookc c = new librarybookc(title, author, price);
         c.display();
         
     }
